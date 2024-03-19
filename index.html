@@ -4,54 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Portfolio</title>
 </head>
 <body>
-    <div class="portfolio">
-        <header>
-            <div class="logo">
-                <img src="./images/logo_trial.png" alt="">
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="#contact">About</a></li>
-                    <li><a href="">Porfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <div class="my_portfolio">
+            <h3><i class="fa-solid fa-code"></i> Rhoda's Portfolio</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#contact">About</a></li>
+                <li><a href="">Porfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <!----Landing page-->
         <div class="home">
-            <div class=intro>
-                <h1>Hi, I'm <span>Rhoda</span> <br>Muya </h1>
-                <p>This is my official portfolio as a Software Engineer</p>
-                <a href="">Download CV</a>
-
-            </div>
             <div class="photo">
-                <img src="./images/img.jpg" alt="">
+                <img src="/images/Untitled design.png" alt="my-photo">
             </div>
-        </div>
-        <div class="about" id="contact">
-            <div class="description">
+            <div class=intro>
                 <h2>About Me</h2>
-                <p>I'm a software engineerwho is very passionate about creating innovative solutions using technology.Currently I'm focused on building human-centered applications to bring innovation. <br>
-                    I consider myself to be innovative andcreatinve. And I believe technology and software development has the capacity to bring so much to the world.
+                <h3>I'm <span>Rhoda</span> Muya </h3>
+                <p>I'm a software engineer who is very passionate about creating innovative solutions using technology. <br>Currently I'm focused on building human-centered applications to bring innovation. <br>
+                    I consider myself to be innovative and creative. And I believe technology and software development has the capacity to bring so much to the world.
                 </p>
-            </div>
-            <div class="hobbies">
-                <h2>My hobbies</h2>
-                <ol>
-                    <li>Horse Riding</li>
-                    <li>Travelling</li>
-                    <li>Reading </li>
-                    <li>Doing Yoga</li>
-                </ol>
+                <!--<p>This is my official portfolio as a Software Engineer</p>-->
+                <div class="buttons">
+                    <a href=""><i class="fa-solid fa-download"></i> Download CV</a>
+                    <a href="#contact">Contact Me</a>
+                </div>
             </div>
         </div>
+
+        <!------About me section-->
         <section class="spirit-animal">
-            <img src="./images/polar-bear-mom-cub_4x3.avif" alt="my spirit animal">
             <div class="description">
                 <h2>My Spirit Animal</h2>
                 <p>The polar bear is a sypmbol of power, perseerance, acceptance and commitment</p>
@@ -60,22 +51,99 @@
                         <li>Brave</li>
                         <li>Powerful</li>
                         <li>Healer</li>
-                        <li>Clam</li>
+                        <li>Calm</li>
                     </ul>
                 </p>
+                <div class="hobbies">
+                    <h2>My hobbies</h2>
+                    <ol>
+                        <li>Horse Riding</li>
+                        <li>Travelling</li>
+                        <li>Reading </li>
+                        <li>Doing Yoga</li>
+                    </ol>
+                </div>
             </div>
+            <div class="animal-photo">
+                <img src="./images/polar-bear-mom-cub_4x3.avif" alt="my spirit animal">
+            </div>
+            
         </section>
+        <div class="contact-me" id="contact">
+            <form>
+                <div class="contact-title">
+                    <h2>Contact Me</h2>
+                    <hr>
+                </div>
+          
+                <div class="input-group">
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                  <span id="name-error"></span>
+                </div>
+          
+                <div class="input-group">
+                  <label>Phone No.</label>
+                  <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                  <span id="phone-error"></span>
+                </div>
+          
+                <div class="input-group">
+                  <label>Email Id</label>
+                  <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                  <span id="email-error"></span>
+                </div>   
+          
+                <div class="input-group">
+                  <label>Your Message</label>
+                  <textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                  <span id="message-error"></span>
+                </div>
+          
+              <button onclick="return validateForm()">Submit</button>
+              <span id="submit-error"></span>
+             
+            </form>
+        </div>
     </div>
+    <!--Footer Section-->
     <footer>
-        <div class="contact" id="contact">
-            <h2>Contact Me</h2>
+        <div class="closing">
             <ul>
-                <li>Email: njerirhoda31@gmail.com</li>
-                <li>Phone: 254799064500</li>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">Instagram</a></li>
+                <li>live</li>
+                <li>love</li>
+                <li>Happy coding! <i class="fa-solid fa-face-smile"></i></li>
             </ul>
         </div>
+        <div class="footer">
+            <div class="contacts">
+                <h3>My Contact Info</h3>
+                <ul>
+                    <li><i class="fa-solid fa-square-envelope"></i>: njerirhoda31@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i>: +254799064500</li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    
+                </ul>
+            </div>
+            <div class="socials">
+                <h3>Get in touch</h3>
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                </ul>
+    
+            </div>
+        </div>
+        <p class="copyright">Copyright &copy; RHODA MUYA <span>designed by me</span></p>
     </footer>
+    <script src="/script.js"></script>
 </body>
 </html>

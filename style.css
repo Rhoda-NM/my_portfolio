@@ -1,32 +1,35 @@
-* {
+body{
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-   /* background: #F2D7D5;*/
+    background: #fceded;
+    height: 200px;
+    max-width: 100%;
 }
-.portfolio{
-    position: relative;
-    width: 100%;
-    height: 200vh;
-    background-color: #ffd2d2;
-    /*padding: 20px;
-    margin: 10px;*/
-
-}
+/*---Header section-----*/
 header{
+    background-color: #c08497;
     display: flex;
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    margin: 0;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 
 }
-header img{
+.my_portfolio{
     margin: 10px;
-    padding: 20px;
-    width:150px;
-    height:150px
+    padding: 10px 20px;
+    
+}
+.my_portfolio h3{
+    color: #34495E;
+    border-radius: 10px;
+    padding:10px 20px;
+    background-color: #f76d6d;
 }
 nav ul li{
     display: inline-block;
@@ -43,27 +46,51 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: #2980B9;
+    font-size: 1.6em;
+}
+/*----Home section-----*/
+.main{
+    margin-top: 140px;
 }
 .home{
-    margin-top: 4%;
-    margin-left: 8%;
+    /*margin-top: 4%;*/
     display: flex;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
-.intro h1{
-    font-size: 60px;
+.intro{
+    width: 50%;
+    padding: 10px;
+    margin-right: 100px;
+}
+.intro h2{
+    font-size: 40px;
     color: #34495e;
     margin-bottom: 15px;
+}
+.intro p{
+    font-size: 20px;
+    line-height: 50px;
+
+}
+.intro h3{
+    font-size: 30px;
+    color: #34495e;
+    margin-bottom: 15px;
+    text-wrap: nowrap;
 
 }
 span{
     color: #8b0000;
     
 }
-.intro  a{
+
+.buttons{
+    display: flex;
+}
+.buttons a{
     background: #f76d6d;
     padding: 10px 18px;
     text-decoration: none;
@@ -71,28 +98,37 @@ span{
     color: #34495E;
     display: inline-block;
     margin: 30px;
+    border-radius: 10px;
+    text-wrap: nowrap;
+}
+.buttons a:hover{
+    color:#2980B9;
+    font-size: 1.4em;
+}
+.photo{
+    width: 40%;
+    margin-left: 100px;
+    padding: 10px 0 10px 0;
+}
+.photo img{
+    display: inline-block;
+    width: 400px;
+    
+    height:550px
 }
 
-img{
-    display: inline-block;
-    margin-left: 80px;
-    padding: 20px;
-    width: 400px;
-    height:500px
-}
-.about{
-    background: #fff;
+/*---Spirit animal section---*/
+.spirit-animal{
     margin-top: 5%;
-    margin-left: 8%;
+    margin-right: 20px;
     display: flex;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
 }
-.description{
-    width: 50%;
-
+.description {
+    width: 40%;
 }
 .description h2{
     font-size: 40px;
@@ -101,7 +137,13 @@ img{
 }
 .description p{
     font-size: 20px;
-
+}
+.description ul li{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    display: inline-block;
+    list-style: lower-alpha;
 }
 .hobbies {
     padding: 20px;
@@ -115,31 +157,174 @@ img{
 .hobbies p{
     font-size: 20px;
 }
-/*-----Spirit animal-----*/
-.spirit-animal{
-    margin-top: 5%;
-    margin-left: 8%;
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: space-between;
+.hobbies ol{
+    background: #c08497;
     padding: 20px;
 }
-.description ul li{
+.hobbies ol li {
     margin: 10px;
     padding: 10px;
     font-size: 20px;
+    background: #ffe5e5;
+    color: #8b0000;
+    margin-left: 35px;
+    
 }
-/*.spirit-animal h2{
-    font-size: 30px;
-    color: #34495e;
-    margin-bottom: 15px;
-    margin-left: 50px
-}*/
-/*-----footer section----*/
-.contact{
-    background: #f76d6d;
-    margin: auto;
-    padding: 10px 80px
+.animal-photo{
+    width: 50%;
+    padding: 10px 20px;
+    margin-right: 50px;
+}
+.animal-photo img{
+    display: inline-block;
+    width: 800px;
+    
+    height:650px
 }
 
+/*-----Form section-----*/
+.contact-me{
+    width: 90%;
+    position: relative;
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-me form{
+    width: 500px;
+    padding: 20px 30px ;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(56, 231, 187, 0.5);
+    margin-left: 400px;
+}
+.contact-title h2{
+    font-size: 40px;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+.input-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+.input-group label{
+    flex-basis: 28%;
+}
+.input-group input, .input-group textarea{
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 16px;
+}
+::placeholder{
+    font-size: 14px;
+}
+
+form button{
+    background: #34495E;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+.input-group span{
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    font-size: 14px;
+    color: #8b0000;
+}
+#submit-error{
+    color: #8b0000;
+}
+.input-group span i{
+    color: seagreen;
+}
+
+
+/*---footer----*/
+footer{
+    width: 100%;
+    background-color: #b0d0d3;
+    padding: 0 20px;
+    bottom: 0;
+}
+.closing{
+    padding-top: 5px;
+    text-align: center;
+}
+.closing ul li{
+    display: inline-block;
+    padding: 0 100px;
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #34495E;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: -20px;
+}
+.contacts{
+    margin-left: 40px;
+}
+.contacts h3{
+    color:#f76d6d;
+    text-align: center;
+}
+.contacts ul li{
+    color: #34495E;
+    list-style: none;
+}
+.contacts ul li i{
+    font-size: 20px;
+}
+.links h3{
+    text-align: center;
+    color: #f76d6d;
+}
+.links ul li{
+    list-style: none;
+    padding: 10px 30px;
+    display: inline-block;
+}
+.links ul li a{
+    color: #34495E;
+}
+.socials{
+    margin-right: 100px;
+}
+.socials h3{
+    color: #f76d6d;
+    text-align: center;
+}
+.socials ul li{
+    display: inline-block;
+    padding: 0 30px;
+}
+.socials ul li a i{
+    font-size: 30px;
+    color:#34495E
+}
+.socials ul li a i:hover{
+    font-size: 40px;
+}
+.copyright{
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 12px;
+}
